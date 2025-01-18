@@ -10,7 +10,10 @@ const getConnection = require("./utils/getConnection");
 
 
 const app = express();
-app.use(cors());  // Prevents Request Block when server and clien running in different ports
+app.use(cors({
+     origin: "http://localhost:3000/",
+}
+));  // Prevents Request Block when server and clien running in different ports
 app.use(express.json());
 
 
