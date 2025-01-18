@@ -10,19 +10,29 @@ const getConnection = require("./utils/getConnection");
 
 
 const app = express();
-app.use(cors({
-     origin: ["https://react-ecommerce-frontend-iota.vercel.app"],
-     methods: ["GET", "POST"],
-     credentials : true
+// app.use(cors({
+//      origin: ["https://react-ecommerce-frontend-iota.vercel.app"],
+//      methods: ["GET", "POST"],
+//      credentials: true
+// }));  // Prevents Request Block when server and clien running in different ports
 
-}
-));  // Prevents Request Block when server and clien running in different ports
+app.use(cors());
 app.use(express.json());
 
 
 
 // call the connection function
-getConnection(); 
+getConnection();
+
+app.get('/example', async (req, res) => {
+     try {
+          // your code logic
+          res.send('Success');
+     } catch (error) {
+          console.error('Error:', error);
+          res.status(500).send('Internal Server Error');
+     }
+});
 
 
 // ===================================> USER AUTHENTICATION APIS <=================================== //
