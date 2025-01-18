@@ -11,7 +11,7 @@ const getConnection = require("./utils/getConnection");
 
 const app = express();
 app.use(cors({
-     origin: "http://localhost:3000/",
+     origin: "https://react-ecommerce-frontend-iota.vercel.app",
 }
 ));  // Prevents Request Block when server and clien running in different ports
 app.use(express.json());
