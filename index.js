@@ -21,7 +21,7 @@ app.use(express.json());
 // call the connection function
 getConnection(); 
 
-app.use("/data", (req,res) => {
+app.get("/data", (req,res) => {
      res.status(200).json({message : "working"})
 })
 
