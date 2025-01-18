@@ -24,9 +24,6 @@ app.use(express.json());
 // call the connection function
 getConnection(); 
 
-app.get("/", (req,res) => {
-     res.status(200).json("hello world")
-})
 
 // ===================================> USER AUTHENTICATION APIS <=================================== //
 
