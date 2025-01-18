@@ -57,8 +57,8 @@ app.post('/UpdatePass', require('./controllers/UpdatePass'));
 
 // ===================================> IMAGE UPLOAD APIS <=================================== //
 
-const imageUploadRoutes = require('./routes/imageUpload'); // Adjust the path if needed
-app.use('/api', imageUploadRoutes);
+// const imageUploadRoutes = require('./routes/imageUpload'); // Adjust the path if needed
+// app.use('/api', imageUploadRoutes);
 
 
 
